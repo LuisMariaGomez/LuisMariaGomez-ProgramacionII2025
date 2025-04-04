@@ -1,0 +1,136 @@
+﻿@TpAPIRestControladores_HostAddress = https://localhost:7196
+
+POST {{TpAPIRestControladores_HostAddress}}/api/animals
+Content-Type: application/json
+
+{
+  "Name" : "Patroclo",
+  "Race" : "Blacky",
+  "birthdate" : "2025-04-04",
+  "Sex" : "Male",
+  "OwnerDni" : "40310478"
+}
+
+###
+GET {{TpAPIRestControladores_HostAddress}}/api/animals
+
+###
+
+@id=1
+GET {{TpAPIRestControladores_HostAddress}}/api/animals/{{id}}
+
+###
+
+POST {{TpAPIRestControladores_HostAddress}}/api/animals
+Content-Type: application/json
+
+{
+  //Animals
+}
+
+###
+
+PUT {{TpAPIRestControladores_HostAddress}}/api/animals/1
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "Name" : "Patroclo",
+  "Race" : "Blacky",
+  "birthdate" : "2025-04-08",
+  "Sex" : "Male",
+  "OwnerDni" : "40310478"}
+
+###
+
+DELETE {{TpAPIRestControladores_HostAddress}}/api/animals/1
+
+###
+
+POST {{TpAPIRestControladores_HostAddress}}/api/attentions
+Content-Type: application/json
+{
+
+            "AnimalId": 101,
+            "ReasonForConsultation": "Infección ocular",
+            "Treatment": "Limpieza y gotas antibióticas",
+            "Medications": "Tobramicina",
+            "Date": "2024-04-03"
+}
+###
+POST {{TpAPIRestControladores_HostAddress}}/api/attentions
+Content-Type: application/json
+
+{
+
+        
+            "AnimalId": 101,
+            "ReasonForConsultation": "Dolor en la pata trasera",
+            "Treatment": "Reposo y vendaje",
+            "Medications": "Ibuprofeno veterinario",
+            "Date": "2024-04-04"
+        
+}
+
+###
+
+GET {{TpAPIRestControladores_HostAddress}}/api/attentions/101
+
+###
+
+GET {{TpAPIRestControladores_HostAddress}}/api/attentions
+
+###
+
+POST {{TpAPIRestControladores_HostAddress}}/api/attentions
+Content-Type: application/json
+
+{
+  //Attentions
+}
+
+###
+
+GET {{TpAPIRestControladores_HostAddress}}/api/attentions/101
+
+###
+
+@idAnimal=0
+GET {{TpAPIRestControladores_HostAddress}}/api/attentions/ByAnimal/101
+
+###
+
+POST {{TpAPIRestControladores_HostAddress}}/api/animals
+Content-Type: application/json
+
+{
+  "Name" : "Patroclo",
+  "Race" : "Blacky",
+  "birthdate" : "2025-04-04",
+  "Sex" : "Male",
+  "OwnerDni" : "40310478"
+}
+###
+
+POST {{TpAPIRestControladores_HostAddress}}/api/animals
+Content-Type: application/json
+
+{
+  "Name" : "Brunella",
+  "Race" : "Criollo",
+  "birthdate" : "2022-04-04",
+  "Sex" : "Female",
+  "OwnerDni" : "40310478"
+}
+
+
+###
+
+GET {{TpAPIRestControladores_HostAddress}}/api/animals
+
+###
+
+@OwnerDni=string
+GET {{TpAPIRestControladores_HostAddress}}/api/Animals/ByOwner/40310478
+
+###
