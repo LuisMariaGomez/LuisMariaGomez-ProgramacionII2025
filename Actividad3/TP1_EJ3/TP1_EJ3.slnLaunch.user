@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "TP1_EJ3\\TP1_EJ3.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ConsoleApp2\\ConsoleApp2.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
