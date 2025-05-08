@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{B5608CF3-DA94-448E-87DA-09F17469C03B}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C45C098C-FEE7-46FE-9155-1CA3D2C6447D}|Shared\\Shared.csproj|c:\\users\\luis maria gomez\\desktop\\github\\ices\\progii.buffet\\tp1\\actividad3\\tp1_ej3\\shared\\entities\\animals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45C098C-FEE7-46FE-9155-1CA3D2C6447D}|Shared\\Shared.csproj|solutionrelative:shared\\entities\\animals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CD142BF-7692-4D47-99F4-96AA39C731AC}|TP1_EJ3\\TP1_EJ3.csproj|c:\\users\\luis maria gomez\\desktop\\github\\ices\\progii.buffet\\tp1\\actividad3\\tp1_ej3\\tp1_ej3\\controllers\\animalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CD142BF-7692-4D47-99F4-96AA39C731AC}|TP1_EJ3\\TP1_EJ3.csproj|solutionrelative:tp1_ej3\\controllers\\animalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AnimalsLogic.cs",
               "DocumentMoniker": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\CNegocio\\Logica\\AnimalsLogic.cs",
               "RelativeDocumentMoniker": "CNegocio\\Logica\\AnimalsLogic.cs",
@@ -38,15 +42,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AnimalsController.cs",
               "DocumentMoniker": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\TP1_EJ3\\Controllers\\AnimalsController.cs",
               "RelativeDocumentMoniker": "TP1_EJ3\\Controllers\\AnimalsController.cs",
               "ToolTip": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\TP1_EJ3\\Controllers\\AnimalsController.cs",
               "RelativeToolTip": "TP1_EJ3\\Controllers\\AnimalsController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwDAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T19:43:55.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Animals.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\Shared\\Entities\\Animals.cs",
+              "RelativeDocumentMoniker": "Shared\\Entities\\Animals.cs",
+              "ToolTip": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\Shared\\Entities\\Animals.cs",
+              "RelativeToolTip": "Shared\\Entities\\Animals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T22:21:38.4Z",
               "EditorCaption": ""
             }
           ]
@@ -63,7 +80,7 @@
               "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
               "ToolTip": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\ConsoleApp2\\Program.cs",
               "RelativeToolTip": "ConsoleApp2\\Program.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAAJ4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAswLoAAAC3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T19:44:23.526Z",
               "EditorCaption": ""

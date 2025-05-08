@@ -53,7 +53,8 @@ class Program
             Console.WriteLine("1. Listar animales");
             Console.WriteLine("2. Ver animal por ID");
             Console.WriteLine("3. Agregar animal");
-            Console.WriteLine("4. Salir");
+            Console.WriteLine("4. Eliminar animal");
+            Console.WriteLine("5. Salir");
             Console.Write("Seleccione una opción: ");
             var opcion = Console.ReadLine();
 
@@ -69,6 +70,12 @@ class Program
                     await AgregarAnimal();
                     break;
                 case "4":
+                    await AliminarAnimal();
+                    break;
+                case "5":
+                    await ModificarAnimal();
+                    break;
+                case "6":
                     salirAnimales = true;
                     break;
                 default:
@@ -107,6 +114,12 @@ class Program
                     await AgregarDuenio();
                     break;
                 case "4":
+                    await EliminarDuenio();
+                    break;
+                case "5":
+                    await ModificarDuenio();
+                    break;
+                case "6":
                     salirDuenios = true;
                     break;
                 default:
@@ -145,6 +158,12 @@ class Program
                     await AgregarAtencion();
                     break;
                 case "4":
+                    await EliminarAtencion();
+                    break;
+                case "5":
+                    await ModificarAtencion();
+                    break;
+                case "6":
                     salirAtenciones = true;
                     break;
                 default:
@@ -165,7 +184,7 @@ class Program
         var animales = await client.GetFromJsonAsync<List<AnimalsDTO>>("animals");
         foreach (var animal in animales)
         {
-            Console.WriteLine($"ID: {animal.Id}, Nombre: {animal.Name}, Raza: {animal.Race} \n");
+            Console.WriteLine($"ID: {animal.Id}, Nombre: {animal.Name}, Raza: {animal.Race}, Fecha de nacimiento: {animal.birthdate}, Sexo: {animal.Sex}, DNI duenio: {animal.OwnerDni}");
         }
     }
 
@@ -200,6 +219,40 @@ class Program
         {
             Console.WriteLine("Error al agregar animal.");
         }
+    }
+
+    static async Task AliminarAnimal()
+    {
+        Console.Write("Ingrese el ID del animal a eliminar: ");
+        var id = Console.ReadLine();
+        var response = await client.DeleteAsync($"animals/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Animal eliminado con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al eliminar animal.");
+        }
+    }
+
+    static async Task ModificarAnimal()
+    {
+        Console.Write("Ingrese el ID del animal a modificar: ");
+        var id = Console.ReadLine();
+        var nuevoAnimal = new AnimalsDTO();
+        Console.Write("Nombre: ");
+        nuevoAnimal.Name = Console.ReadLine();
+        Console.Write("Raza: ");
+        nuevoAnimal.Race = Console.ReadLine();
+        Console.Write("Fecha de nacimiento (yyyy-MM-dd): ");
+        nuevoAnimal.birthdate = DateTime.Parse(Console.ReadLine());
+        Console.Write("Sexo (M/F): ");
+        nuevoAnimal.Sex = Console.ReadLine();
+        Console.Write("DNI del dueño: ");
+        nuevoAnimal.OwnerDni = Console.ReadLine();
+        var response = await client.PutAsJsonAsync($"animals/{id}", nuevoAnimal);
+
     }
 
     // Métodos para interactuar con la API de duenios
@@ -241,6 +294,35 @@ class Program
         {
             Console.WriteLine("Error al agregar dueño.");
         }
+    }
+
+    static async Task EliminarDuenio()
+    {
+        Console.Write("Ingrese el ID del dueño a eliminar: ");
+        var id = Console.ReadLine();
+        var response = await client.DeleteAsync($"owners/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Dueño eliminado con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al eliminar dueño.");
+        }
+    }
+
+    static async Task ModificarDuenio()
+    {
+        Console.Write("Ingrese el ID del dueño a modificar: ");
+        var id = Console.ReadLine();
+        var duenio = new OwnersDTO();
+        Console.Write("DNI: ");
+        duenio.Dni = Console.ReadLine();
+        Console.Write("Nombre: ");
+        duenio.Name = Console.ReadLine();
+        Console.Write("Apellido: ");
+        duenio.Surname = Console.ReadLine();
+        var response = await client.PutAsJsonAsync($"owners/{id}", duenio);
     }
 
     // Métodos para interactuar con la API de Attentions
@@ -287,4 +369,36 @@ class Program
             Console.WriteLine("Error al agregar atención.");
         }
     }
+    static async Task EliminarAtencion()
+    {
+        Console.Write("Ingrese el ID de la atención a eliminar: ");
+        var id = Console.ReadLine();
+        var response = await client.DeleteAsync($"attentions/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Atención eliminada con éxito.");
+        }
+        else
+        {
+            Console.WriteLine("Error al eliminar atención.");
+        }
+    }
+    static async Task ModificarAtencion()
+    {
+        Console.Write("Ingrese el ID de la atención a modificar: ");
+        var id = Console.ReadLine();
+        var atencion = new AttentionsDTO();
+        Console.Write("ID del animal: ");
+        atencion.AnimalId = int.Parse(Console.ReadLine());
+        Console.Write("Razon de consulta: ");
+        atencion.ReasonForConsultation = Console.ReadLine();
+        Console.Write("Tratamiento: ");
+        atencion.Treatment = Console.ReadLine();
+        Console.Write("Medicacion: ");
+        atencion.Medications = Console.ReadLine();
+        Console.Write("Fecha (yyyy-MM-dd): ");
+        atencion.Date = DateTime.Parse(Console.ReadLine());
+        var response = await client.PutAsJsonAsync($"attentions/{id}", atencion);
+    }
 }
+
