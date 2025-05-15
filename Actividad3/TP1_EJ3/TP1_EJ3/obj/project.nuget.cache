@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ml5r0cuMW5c=",
+  "dgSpecHash": "LrEFHP+Afjo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\TP1_EJ3\\TP1_EJ3.csproj",
+  "projectFilePath": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\LuisMariaGomez-ProgramacionII2025\\Actividad3\\TP1_EJ3\\TP1_EJ3\\TP1_EJ3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis Maria Gomez\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Luis Maria Gomez\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

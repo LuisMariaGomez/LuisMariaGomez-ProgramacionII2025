@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FFr1R1P94qU=",
+  "dgSpecHash": "NO99GY6Vllw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\ICES\\ProgII.Buffet\\TP1\\Actividad3\\TP1_EJ3\\CNegocio\\CNegocio.csproj",
+  "projectFilePath": "C:\\Users\\Luis Maria Gomez\\Desktop\\github\\LuisMariaGomez-ProgramacionII2025\\Actividad3\\TP1_EJ3\\CNegocio\\CNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis Maria Gomez\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Luis Maria Gomez\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
